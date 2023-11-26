@@ -1,3 +1,5 @@
+package simpleCalcPackage
+
 object SimpleCalc {
 
     /**
@@ -17,7 +19,7 @@ object SimpleCalc {
     /**
      * Returns sum of all even array elements
      */
-    fun sumOffEvens(arr: IntArray): Int {
+    fun sumOfEvens(arr: IntArray): Int {
         var result = 0
         for (i in arr) {
             if (i % 2 == 0) result += i
