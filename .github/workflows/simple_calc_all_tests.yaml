@@ -1,0 +1,32 @@
+name: Run All Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Unit tests Script
+        run: bash simple-calc-test-runner.sh --test-type unit --report-dir src/test/resources/reports-unit-tests
+
+      - name: Run BDD tests Script
+        run: bash simple-calc-test-runner.sh --test-type BDD --report-dir src/test/resources/reports-BDD-tests
+
+      - name: Unit test archive report
+        uses: actions/upload-artifact@v2
+        with:
+         name: unit-test-report
+         path: src/test/resources/reports-unit-tests
+
+      - name: BDD test archive report
+        uses: actions/upload-artifact@v2
+        with:
+          name: unit-test-report
+          path: src/test/resources/reports-BDD-tests

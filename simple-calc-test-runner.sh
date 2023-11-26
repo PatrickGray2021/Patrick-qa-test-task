@@ -1,8 +1,28 @@
 #!/bin/bash
 
 run_tests() {
-    test_type=$1
-    destination=$2
+    test_type=""
+    destination=""
+
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+        case $key in
+            --test-type)
+                test_type="$2"
+                shift
+                shift
+                ;;
+            --report-dir)
+                destination="$2"
+                shift
+                shift
+                ;;
+            *)
+                echo "Unknown option: $1"
+                shift
+                ;;
+        esac
+    done
 
     gradle_cmd="./gradlew"
 
@@ -25,17 +45,11 @@ run_tests() {
     fi
     cp -f "$report" "$destination"
 
-
     if [ ! -d logs ]; then
         mkdir -p logs
     fi
-    
+
     $gradle_cmd test > logs/stdout.log 2> logs/stderr.log
 }
 
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <test_type> <destination>"
-    exit 1
-fi
-
-run_tests "$1" "$2"
+run_tests "$@"

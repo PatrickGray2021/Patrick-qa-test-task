@@ -9,7 +9,7 @@ import simpleCalcPackage.SimpleCalc;
 
 import java.util.Arrays;
 
-public class SumOfEvensStepDefinition {
+public class SumOfEvensStepDefinitions {
 
     private int returnedSumOfInts;
     private int expectedSumOfInts;

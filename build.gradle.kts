@@ -24,7 +24,7 @@ tasks.register<JavaExec>("runCucumber") {
     args = listOf(
         "--glue", "cucumberStepDefinitions",
         "--plugin", "html:$buildDir/reports/tests/runCucumber/index.html",
-        "src/test/resources/SimpleCalcScenarios.feature"
+        "src/test/resources/cucumber/SimpleCalcScenarios.feature"
     )
 }
 
