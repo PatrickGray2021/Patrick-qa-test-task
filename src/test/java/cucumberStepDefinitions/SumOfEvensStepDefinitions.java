@@ -9,6 +9,9 @@ import simpleCalcPackage.SimpleCalc;
 
 import java.util.Arrays;
 
+/**
+ * Step definitions for Scenario: Sum of all even numbers.
+ */
 public class SumOfEvensStepDefinitions {
 
     private int returnedSumOfInts;

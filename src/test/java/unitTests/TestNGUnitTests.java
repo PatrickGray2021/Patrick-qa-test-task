@@ -6,6 +6,9 @@ import simpleCalcPackage.SimpleCalc;
 
 import java.util.Arrays;
 
+/**
+ * TestNG unit test coverage for SimpleCal.kt.
+ */
 public class TestNGUnitTests {
 
     @Test
@@ -37,7 +40,9 @@ public class TestNGUnitTests {
     @Test
     public void sumOfEvensMethodTest() {
         int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        // evens
         Assert.assertEquals(Arrays.stream(intArray).filter(i -> i % 2 == 0).sum(), SimpleCalc.INSTANCE.sumOfEvens(intArray));
+        // odds
         Assert.assertNotEquals(Arrays.stream(intArray).filter(i -> i % 2 != 0).sum(), SimpleCalc.INSTANCE.sumOfEvens(intArray));
     }
 }

@@ -7,6 +7,9 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import simpleCalcPackage.SimpleCalc;
 
+/**
+ * Step definitions for Scenario: Run through a number of calculations.
+ */
 public class TestAllMethodsStepDefinitions {
 
     private final int firstNumber = 3;
@@ -28,7 +31,7 @@ public class TestAllMethodsStepDefinitions {
       Assert.assertEquals(SimpleCalc.INSTANCE.multiply(firstNumber,secondNumber),9);
     }
 
-    @But("The sum of all evens when I enter 3 , 3 ,3 should not be > 0")
+    @But("The sum of all evens when I enter 3 , 3 , 3 should not be > 0")
     public void sumOfEvensMethod(){
     Assert.assertFalse(SimpleCalc.INSTANCE.sumOfEvens(arrayOfNums) > 0);
     }

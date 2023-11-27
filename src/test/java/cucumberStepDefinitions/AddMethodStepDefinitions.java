@@ -8,7 +8,7 @@ import org.testng.Assert;
 import simpleCalcPackage.SimpleCalc;
 
 /**
- * Class to hold Cucumber step definition, see .feature file for scenarios.
+ * Step definitions for Scenario: Adding two numbers.
  */
 public class AddMethodStepDefinitions {
 
