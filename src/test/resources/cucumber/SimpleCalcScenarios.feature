@@ -39,4 +39,4 @@ Feature: Using a simple calculator
     Given I have some calculations to do
     When When I add 3 + 3 together the answer should be 6
     Then If I multiply 3 * 3 the answer will be 9
-    But The sum of all evens when I enter 3 , 3 ,3 should not be > 0
+    But The sum of all evens when I enter 3 , 3 , 3 the answer should not be greater than 0

@@ -1,5 +1,6 @@
 package cucumberStepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.But;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,7 +32,7 @@ public class TestAllMethodsStepDefinitions {
       Assert.assertEquals(SimpleCalc.INSTANCE.multiply(firstNumber,secondNumber),9);
     }
 
-    @But("The sum of all evens when I enter 3 , 3 , 3 should not be > 0")
+    @But("The sum of all evens when I enter 3 , 3 , 3 the answer should not be greater than 0")
     public void sumOfEvensMethod(){
     Assert.assertFalse(SimpleCalc.INSTANCE.sumOfEvens(arrayOfNums) > 0);
     }
