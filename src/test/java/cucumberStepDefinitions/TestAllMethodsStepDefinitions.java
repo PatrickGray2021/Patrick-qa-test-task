@@ -13,7 +13,7 @@ public class TestAllMethodsStepDefinitions {
     private final int secondNumber = 3;
     private int[] arrayOfNums;
 
-    @Given("I have some accounting to do")
+    @Given("I have some calculations to do")
     public void initialise() {
      arrayOfNums = new int[]{firstNumber,secondNumber,3};
     }
@@ -28,7 +28,7 @@ public class TestAllMethodsStepDefinitions {
       Assert.assertEquals(SimpleCalc.INSTANCE.multiply(firstNumber,secondNumber),9);
     }
 
-    @But("my calculation should fail if I expect to get a value greater than 0 when I find the sum of all even numbers for [3,3,3]")
+    @But("The sum of all evens when I enter 3 , 3 ,3 should not be > 0")
     public void sumOfEvensMethod(){
     Assert.assertFalse(SimpleCalc.INSTANCE.sumOfEvens(arrayOfNums) > 0);
     }

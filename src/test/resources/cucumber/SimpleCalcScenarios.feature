@@ -36,7 +36,7 @@ Feature: Using a simple calculator
     And Not the sum of odd numbers
 
   Scenario: Run through a number of calculations
-    Given I have some accounting to do
+    Given I have some calculations to do
     When When I add 3 + 3 together the answer should be 6
     Then If I multiply 3 * 3 the answer will be 9
-    But my calculation should fail if I expect to get a value greater than 0 when I find the sum of all even numbers for [3,3,3]
+    But The sum of all evens when I enter 3 , 3 ,3 should not be > 0
